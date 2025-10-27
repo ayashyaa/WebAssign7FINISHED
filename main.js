@@ -174,11 +174,11 @@ window.addEventListener('keydown', (event) => {
 
  
     var projectData = [
-        { id: 1, name: "Luxury Apartment", category: "Interiors", imgSrc: "img/filter1.jpeg" },
-        { id: 2, name: "Modern Villa", category: "Architecture", imgSrc: "img/filter2.jpeg" },
-        { id: 3, name: "Minimalist Kitchen", category: "Interiors", imgSrc: "img/filter3.jpeg" },
-        { id: 4, name: "Future Skyscraper", category: "Concept", imgSrc: "img/filter4.jpeg" },
-        { id: 5, name: "Loft Design", category: "Interiors", imgSrc: "img/filter5.jpeg" }
+        { id: 1, name: "Luxury Apartment", category: "Interiors", imgSrc: "filter1.jpeg" },
+        { id: 2, name: "Modern Villa", category: "Architecture", imgSrc: "filter2.jpeg" },
+        { id: 3, name: "Minimalist Kitchen", category: "Interiors", imgSrc: "filter3.jpeg" },
+        { id: 4, name: "Future Skyscraper", category: "Concept", imgSrc: "filter4.jpeg" },
+        { id: 5, name: "Loft Design", category: "Interiors", imgSrc: "filter5.jpeg" }
     ];
 
 
