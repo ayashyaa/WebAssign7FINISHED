@@ -1,0 +1,150 @@
+/* Palette (scoped via CSS variables for consistency) */
+.estimate-page {
+  --cream: rgb(255, 248, 240);
+  --deep-blue: #003D5B;
+  --oxide-blue: #30638E;
+  --teal: #00798C;
+  --accent-red: #D1495B;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.estimate-page.bg-cream {
+  background-color: var(--cream);
+}
+
+.estimate-page #top {
+  background: var(--deep-blue);
+}
+
+.estimate-page .nav_links {
+  color: var(--cream);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.estimate-page .nav_links:hover {
+  color: var(--accent-red);
+}
+
+.estimate-page .hero-section {
+  background: var(--oxide-blue);
+  color: var(--cream);
+  margin-top: 56px;
+}
+
+@media (min-width: 992px) {
+  .estimate-page .hero-section {
+    margin-top: 0;
+  }
+}
+
+.estimate-page .hero-title {
+  font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+  .estimate-page .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .estimate-page .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.estimate-page .hero-subtitle {
+  font-size: 1.1rem;
+}
+
+.estimate-page .section-title {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-bottom: .3rem;
+  color: #222;
+  border-bottom: 2px solid var(--accent-red);
+}
+
+.estimate-page .estimate-card {
+  background: var(--teal);
+  color: var(--cream);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+  border-radius: .5rem;
+}
+
+.estimate-page .fieldset-title {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+.estimate-page .form-control,
+.estimate-page .form-select,
+.estimate-page textarea {
+  border: 1px solid var(--cream);
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+.estimate-page textarea {
+  resize: vertical;
+}
+
+.estimate-page .page-footer {
+  background: var(--deep-blue);
+  color: var(--cream);
+}
+
+.estimate-page .footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.estimate-page .footer-link:hover {
+  color: var(--accent-red);
+}
+
+.estimate-page .card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.estimate-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.estimate-page .card-button {
+  display: inline-block;
+  background: var(--accent-red);
+  color: var(--cream);
+  padding: .6rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background .3s ease;
+}
+
+.estimate-page .card-button:hover {
+  background: var(--deep-blue);
+  color: var(--cream);
+}
+
+@media (min-width: 600px) {
+  .estimate-page {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .estimate-page {
+    font-size: 18px;
+  }
+}

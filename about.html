@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>La Home — About the Studio & Team</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25694.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <div id="scroll-progress-container">
+    <div id="scroll-progress-bar"></div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-deep-blue fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="main.html">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="La Home Logo" width="36" height="36"
+            class="me-2">
+        </a>
+        <button id="themeToggle" class="btn btn-outline-light ms-3">🌙</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="main.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
+            <li class="nav-item"><a class="nav-link" href="estimate.html">Request Estimate</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="container-fluid mt-0">
+    <div class="row g-0">
+      <!-- <aside class="col-lg-2 p-3" style="background:#0e5071; color:rgb(255,248,240);">
+        <h2 class="pb-2">Contacts</h2>
+        <p class="mb-1">Email: <a href="mailto:info@lahome.com" class="text-light">info@lahome.com</a></p>
+        <p class="mb-1">Phone: <a href="tel:+77001234567" class="text-light">+7 700 123 45 67</a></p>
+        <a href="https://instagram.com/la_home_buro/" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" height="24">
+        </a>
+      </aside> -->
+
+      <aside class="col-lg-2 p-3" style="background:#0e5071; color:rgb(255,248,240);">
+        <h2 class="pb-2">Contacts</h2>
+
+        <p class="mb-1">
+          Email:
+          <span class="copy-text">info@lahome.com</span>
+          <button class="btn btn-sm btn-outline-light copy-btn" data-copy="info@lahome.com" title="Copy">
+            📋
+          </button>
+        </p>
+
+        <p class="mb-1">
+          Phone:
+          <span class="copy-text">+7 700 123 45 67</span>
+          <button class="btn btn-sm btn-outline-light copy-btn" data-copy="+77001234567" title="Copy">
+            📋
+          </button>
+        </p>
+
+        <a href="https://instagram.com/la_home_buro/" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" width="24" height="24">
+        </a>
+      </aside>
+
+
+
+      <main class="col-lg-10 p-3">
+        <section id="hero" class="text-center py-5" style="background:#30638E; color:rgb(255,248,240);">
+          <img class="img-fluid mb-3"
+            src="https://optim.tildacdn.pro/tild6339-6334-4566-a437-393333626630/-/resize/728x/-/format/webp/A3E65E25-4699-47C9-B.png.webp"
+            alt="Interior design collage by La Home" />
+          <h1>La Home Studio</h1>
+          <p>La Home — exteriors and interiors you fall in love with.</p>
+        </section>
+
+        <section id="about" aria-label="About La Home" class="my-5 px-sm-2 px-md-3">
+          <h2>About Our Company</h2>
+          <p>
+            For several years, La Home Studio has been creating exactly the kind of exterior and interior design
+            that leaves our clients fully satisfied. We hear you, we feel your wishes.
+          </p>
+          <div class="text-center my-5">
+            <div class="counter-box-blue mx-auto" style="max-width: 1000px;">
+              <p class="mb-0">
+                <span id="projectsCount" data-target="156" class="counter-number-blue">0</span>+
+              </p>
+              <p class="counter-caption-blue">Successful Projects Completed</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="founder" class="my-5 px-sm-2 px-md-3">
+          <h2 class="mb-4">Leila Bersanova</h2>
+          <div class="row g-4 mb-4">
+            <div class="col-md-5 col-lg-6 text-center">
+              <figure>
+                <img class="img-fluid rounded-circle mb-3"
+                  src="https://static.tildacdn.pro/tild3436-3734-4365-b766-376665613833/photo_2023-08-05_08-.jpg"
+                  alt="Leila Bersanova — founder of La Home Studio">
+                <figcaption class="text-muted">Founder & Visionary Leader</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-7 col-lg-6">
+              <article>
+                <header>
+                  <h3>About the Leader</h3>
+                </header>
+                <p>The heart of our team — Leila Bersanova.</p>
+                <p>
+                  Leila Bersanova is a confident leader, an inspiring visionary, and an endless source of bold,
+                  cutting‑edge ideas embodied in our projects. She stays one step ahead of design trends and fearlessly
+                  implements them in every project — from commercial exteriors to the interiors of cozy apartments.
+                  She has an incredible sense of color and space. Polite, calm, and simply beautiful — the heart of our
+                  team.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <article>
+                <header>
+                  <h3>My Story</h3>
+                </header>
+                <p>My name is Leila, I am 31 years old, and a mother of two children — a son and a daughter (12 and 10).
+                  I am a designer and the founder of my own studio.</p>
+                <p>I had very few childhood photos (I was the third child in the family, and times were tough).
+                  But my path to design began in childhood — I loved drawing, rearranging furniture, and helping with
+                  repairs.
+                  I even mixed flour paste to glue wallpaper myself, which lasted almost 10 years.</p>
+                <p>I never missed an episode of “School of Renovation” or “Housing Question” on TV.
+                  At 11, I already knew I would become a designer, even though in Kazakhstan the profession was not
+                  popular.</p>
+              </article>
+            </div>
+            <div class="col-lg-6">
+              <article>
+                <p>At 18, I entered the Academy of Architecture. People tried to discourage me, saying there was no
+                  demand.
+                  I started as a sales manager in a company supplying design projects. That gave me confidence and
+                  knowledge
+                  of the design and architecture market.</p>
+                <p>Later, I worked in a construction company, learning the technical side of building.
+                  Then I joined a design studio in St. Petersburg, where I gained valuable experience.
+                  After six months, I realized I couldn’t work for someone else — I quit and took my first independent
+                  projects.</p>
+                <p>Word of mouth began to spread. It was scary, but as they say, there is no self‑development without
+                  risk.
+                  Now I work in a studio with a stunning view of the city and mountains, implementing amazing projects.
+                  Today, La Home Studio operates in Europe — something I never even dreamed of.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="team" aria-label="La Home Team" class="my-5 px-sm-2 px-md-3">
+          <h2 class="mb-4">Our Team</h2>
+          <div class="position-relative mb-4" style="max-width:400px;">
+            <input type="text" id="teamSearch" class="form-control" placeholder="Search team member by name or role...">
+            <div id="teamSuggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></div>
+          </div>
+          <div class="row g-4" id="teamList">
+            <div class="col-sm-12 col-md-6">
+              <article class="h-100">
+                <h3>Aidana Yesenbayeva — Interior Architect</h3>
+                <div class="row g-3 align-items-start">
+                  <div class="col-5 col-md-4">
+                    <img class="lazy img-fluid rounded"
+                      src="https://placehold.co/10x10?text=..."
+                      data-src="https://static.tildacdn.pro/tild3532-6663-4838-b033-643335666235/photo_2023-08-05_08-.jpg"
+                      alt="Aidana Yesenbayeva — interior architect">
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <p>Master of functional layouts.</p>
+                    <p>
+                      Aidana’s strength is planning solutions. She uses drawings to solve seemingly impossible tasks.
+                      On just 50 sq. meters, she creates functional, cozy spaces that feel like a dream home.
+                      Disciplined, calm under pressure, and respectful of deadlines — she values your time.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <article class="h-100">
+                <h3>AiDana Erkinbekova — Visualization Designer</h3>
+                <div class="row g-3 align-items-start">
+                  <div class="col-5 col-md-4 order-md-2">
+                    <img class="lazy img-fluid rounded"
+                      src="https://placehold.co/10x10?text=..."
+                      data-src="https://static.tildacdn.pro/tild6439-6534-4537-a134-363335306365/IMG_0947.jpg"
+                      alt="Ai-Dana Erkinbekova — visualization designer">
+                  </div>
+                  <div class="col-7 col-md-8 order-md-1">
+                    <p>Creative and detail-oriented.</p>
+                    <p>
+                      Extremely inventive, highly observant, and full of ideas. AiDana notices even the smallest
+                      details,
+                      generates creative solutions, and always aims for results. Cheerful and very talented.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <article class="h-100">
+                <h3>Aktilek — 3D Visualizer</h3>
+                <div class="row g-3 align-items-start">
+                  <div class="col-5 col-md-4">
+                    <img class="lazy img-fluid rounded"
+                      src="https://placehold.co/10x10?text=..."
+                      data-src="https://static.tildacdn.pro/tild6334-6130-4035-b337-653136363566/IMG-20221022-WA0021.jpg"
+                      alt="Aktilek — 3D visualizer">
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <p>Precision and refined taste.</p>
+                    <p>
+                      Raised in a military family, Aktilek has discipline and determination. Talented, with refined
+                      taste,
+                      a beautiful voice, and infectious laughter. Thanks to her skillful hands, our clients receive
+                      bright,
+                      vivid 3D images of their future interiors.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <article class="h-100">
+                <h3>Alina — Procurement Manager</h3>
+                <div class="row g-3 align-items-start">
+                  <div class="col-5 col-md-4 order-md-2">
+                    <img class="lazy img-fluid rounded"
+                      src="https://placehold.co/10x10?text=..."
+                      data-src="https://static.tildacdn.pro/tild3738-3264-4530-b164-663566363031/photo.jpg"
+                      alt="Alina — procurement manager and designer">
+                  </div>
+                  <div class="col-7 col-md-8 order-md-1">
+                    <p>Diplomatic, stylish, and knowledgeable.</p>
+                    <p>
+                      Alina is our procurement manager (complectator) and also a designer. A mother of four and
+                      grandmother of one,
+                      she has an economics degree and a passion for beauty and creativity. She has impeccable taste, not
+                      only in
+                      fashion but in everything around her.
+                    </p>
+                    <p>
+                      She completed interior design courses at the “April” school and previously worked in boutiques
+                      like Brioni
+                      and Etro. A true diplomat with excellent communication skills, Alina is a valuable team member
+                      with deep
+                      knowledge of materials — she can identify a lighting brand and price at first glance.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="my-5 px-sm-2 px-md-3">
+          <h2 class="mb-4">Our Services</h2>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img src="https://placehold.co/600x350/30638E/FFF?text=INTERIOR" class="card-img-top"
+                  alt="Interior Design">
+                <div class="card-body">
+                  <h3 class="card-title h5 mb-2">Interior Design</h3>
+                  <p class="card-text">Complete interior projects: planning, materials, furniture curation, and
+                    mood-driven spaces.</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-danger fw-bold">See more</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img src="https://placehold.co/600x350/D1495B/FFF?text=EXTERIOR" class="card-img-top"
+                  alt="Exterior Design">
+                <div class="card-body">
+                  <h3 class="card-title h5 mb-2">Exterior Design</h3>
+                  <p class="card-text">Elegant facades and landscape concepts that balance function, aesthetics, and
+                    local context.</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-danger fw-bold">Order</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img src="https://placehold.co/600x350/00798C/FFF?text=RENOVATION" class="card-img-top"
+                  alt="Full Renovation">
+                <div class="card-body">
+                  <h3 class="card-title h5 mb-2">Full Renovation</h3>
+                  <p class="card-text">Turnkey renovation with scheduling, procurement, and site coordination for
+                    on-time delivery.</p>
+                </div>
+                <div class="card-footer bg-transparent">
+                  <a href="#" class="btn btn-danger fw-bold">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; Asima Abdikarimova, Ayazhan Ayetova</p>
+      <div id="dateTimeBlock" class="text-center my-3 fw-bold"></div>
+      <nav>
+        <a href="about.html#hero">Back to top</a>
+        <a href="estimate.html">Request Estimate</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="themeToggle.js"></script>
+  <script src="datetime.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

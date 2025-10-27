@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Home — Portfolio</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <header id="top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #003D5B;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main.html">La Home</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="main.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Studio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="estimate.html">Request Estimate</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button id="themeToggle" class="btn btn-outline-light ms-3 d-flex align-items-center">
+                <span>Change theme</span>
+            </button>
+        </nav>
+    </header>
+
+    <div class="container-fluid pt-5">
+        <div class="row">
+
+            <aside class="d-none d-md-block col-md-3">
+                <div class="p-3 mb-4 rounded" style="background-color: #f4f4f4; position: sticky; top: 80px;">
+                    
+                    <h3 class="mt-2">Search Projects</h3>
+                    <div class="mb-3 position-relative">
+                        <input type="text" id="project-search" class="form-control" placeholder="Search by name..." aria-label="Search projects">
+                        <div id="autocomplete-suggestions" class="list-group position-absolute w-100 shadow-lg" style="z-index: 100; display: none;">
+                            </div>
+                    </div>
+                    <h3>Filter Projects</h3>
+                    <p id="filter-status" class="text-muted small mb-3">Loading projects...</p>
+
+                    <div id="project-filters" class="btn-group-vertical w-100" role="group"
+                        aria-label="Project filters">
+                        <button type="button" class="btn btn-outline-dark" data-filter="All">All Projects</button>
+                        <button type="button" class="btn btn-outline-dark" data-filter="Interiors">Interiors</button>
+                        <button type="button" class="btn btn-outline-dark"
+                            data-filter="Architecture">Architecture</button>
+                        <button type="button" class="btn btn-outline-dark" data-filter="Concept">Concept</button>
+                    </div>
+
+                    <h3 class="mt-4">Contact</h3>
+                    <p>📞 +7 777 123 4567</p>
+                    <div class="d-flex gap-3 sidebar-social">
+                        <a href="#" class="text-decoration-none"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fab fa-pinterest fa-2x"></i></a>
+                    </div>
+                </div>
+            </aside>
+
+
+            <main class="col-12 col-md-9">
+
+                <section class="mb-5">
+                    <h2>Our Portfolio</h2>
+                    <p>A collection of our best work in residential and commercial design.</p>
+                </section>
+                
+                <section class="mt-5">
+                    <h3 class="mb-4">All Projects</h3>
+                    <div id="project-list-container" class="row row-cols-1 row-cols-md-2 g-4">
+                    </div>
+                </section>
+
+
+                <section id="carousel-gallery">
+                    <h3 class="mb-4">Featured Projects: Gallery</h3>
+                    <div id="projectCarousel" class="carousel slide carousel-fade shadow-lg"
+                        data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="6"
+                                aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="7"
+                                aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="8"
+                                aria-label="Slide 9"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="3000">.
+                                <img src="img/pucture1.jpeg" class="d-block w-100" alt="Project 1: Modern Bedroom"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Chic Bedroom Design</h5>
+                                    <p>Luxurious minimalism and soft lighting for the perfect retreat.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture2.jpeg" class="d-block w-100" alt="Project 2: Loft Living Room"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Executive Boardroom</h5>
+                                    <p>Functionality and premium materials for productive business meetings.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture3.jpeg" class="d-block w-100" alt="Project 3: Cozy Kitchen"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Rustic Kitchen Design</h5>
+                                    <p>Warm wood tones and high-tech appliances for family comfort.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture4.jpeg" class="d-block w-100" alt="Project 4: Nordic Retreat"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Nordic Retreat</h5>
+                                    <p>Scandinavian minimalism, creating a cozy sanctuary from city life.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture5.jpeg" class="d-block w-100" alt="Project 5: Open Plan"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Open Plan Living</h5>
+                                    <p>Spacious residential area, adaptable for family leisure and entertaining.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture6.jpeg" class="d-block w-100" alt="Project 6: Luxury Bathroom"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Luxury Bathroom</h5>
+                                    <p>The combination of marble, brass, and natural light for the perfect spa
+                                        experience.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture7.jpeg" class="d-block w-100" alt="Project 7: Terrace Concept"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Terrace View Concept</h5>
+                                    <p>Architectural design focused on panoramic windows and integration with
+                                        nature.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture8.jpeg" class="d-block w-100" alt="Project 8: Vintage Library"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Vintage Library</h5>
+                                    <p>A modern take on a classic library, valuing silence and reading.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/pucture9.jpeg" class="d-block w-100"
+                                    alt="Project 9: Minimalist Kitchen"
+                                    style="max-height: 400px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Minimalist Kitchen</h5>
+                                    <p>Perfect ergonomics and hidden storage in a black and white palette.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="mt-5">
+                    <h3>The house of your dreams!</h3>
+                    <p>Don't rack your brains anymore, trust the professionals.</p>
+                    <button id="open-popup-btn" class="btn btn-primary btn-lg shadow-sm"
+                        style="background-color: #D1495B; border-color: #dc8692;">
+                        Order Now
+                    </button>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+
+    <section id="rating-section" class="container mt-5 mb-5">
+        <h2>Rate Us!</h2>
+        <p>Please leave a quick rating to help us improve!</p>
+        <div id="star-rating" style="font-size: 2.5rem; cursor: pointer;">
+            <i class="fas fa-star" data-value="1"></i>
+            <i class="fas fa-star" data-value="2"></i>
+            <i class="fas fa-star" data-value="3"></i>
+            <i class="fas fa-star" data-value="4"></i>
+            <i class="fas fa-star" data-value="5"></i>
+        </div>
+        <p class="mt-2" id="rating-display">Current rating: 0/5</p>
+    </section>
+
+
+
+<!-- counter -->
+    <section id="stats-section" class="container text-center py-5">
+    <div class="row">
+        <div class="col-md-4">
+            <i class="fas fa-home fa-3x mb-2" style="color: #D1495B;"></i>
+            <h3>Projects Completed</h3>
+            <div class="display-4 fw-bold" data-count="156" id="counter-projects">0</div>
+        </div>
+
+
+        <div class="col-md-4">
+            <i class="fas fa-smile fa-3x mb-2" style="color: #D1495B;"></i>
+            <h3>Happy Clients</h3>
+            <div class="display-4 fw-bold" data-count="1000" id="counter-clients">0</div>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-award fa-3x mb-2" style="color: #D1495B;"></i>
+            <h3>Years of Experience</h3>
+            <div class="display-4 fw-bold" data-count="12" id="counter-years">0</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; La Home Studio, 2025. All rights reserved. | Ayetova Ayazhan, Abdikarimova Asima</p>
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <span id="current-datetime" class="text-muted big">Press "SHOW Time"</span>
+                <button type="button" id="show-time-btn" class="btn btn-sm btn-outline-secondary ms-3">
+                    Show time
+                </button>
+                <nav aria-label="Footer navigation">
+                    <a href="#top">Back to top</a>
+                    <a href="estimate.html">Request Estimate</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="contact-modal" class="custom-modal">
+        <div class="modal-content-js">
+            <span class="close-btn-js" id="close-popup-btn">&times;</span>
+
+            <h2>Leave your contact information</h2>
+            <form id="estimate-form">
+                <div style="margin-bottom: 15px;">
+                    <label for="nameInput">Your Name:</label>
+                    <input type="text" id="nameInput" required style="width: 100%; padding: 8px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="emailInput">Email:</label>
+                    <input type="email" id="emailInput" required style="width: 100%; padding: 8px;">
+                </div>
+                <button type="submit"
+                    style="background-color: #D1495B; color: white; padding: 10px 15px; border: none; cursor: pointer;">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <audio id="success-sound" src="sounds/success.mp3" preload="auto"></audio>
+    <audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
