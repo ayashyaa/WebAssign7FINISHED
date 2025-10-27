@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Home — Request an Estimate</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25694.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="estimate.css">
+</head>
+
+<body class="estimate-page bg-cream">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-deep-blue fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="main.html">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="La Home Logo" width="36" height="36"
+            class="me-2">
+        </a>
+        <button id="themeToggle" class="btn btn-outline-light ms-3">🌙</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="main.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
+            <li class="nav-item"><a class="nav-link" href="estimate.html">Request Estimate</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section text-center text-cream bg-oxide-blue">
+    <div class="container py-5">
+      <h1 class="hero-title mb-2">Request an Estimate</h1>
+      <p class="hero-subtitle mb-0">Tell us about your project — we’ll prepare a personalized estimate for you.</p>
+    </div>
+  </section>
+
+  <section id="estimate-form" class="py-4" aria-label="Estimate request form">
+    <div class="container">
+      <h2 class="section-title">Project Details</h2>
+
+      <form id="estimateForm" action="#" method="post" class="estimate-card p-4 rounded-3" novalidate>
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <fieldset class="m-0 p-0 border-0">
+              <legend class="fieldset-title">Contact Information</legend>
+
+              <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" id="name" name="name" class="form-control">
+              <div class="invalid-feedback" id="nameFeedback">
+              </div>
+
+              <label for="email" class="form-label mt-3">Email <span class="text-danger">*</span></label>
+              <input type="text" id="email" name="email" class="form-control">
+              <div class="invalid-feedback" id="emailFeedback">
+
+              </div>
+
+              <label for="phone" class="form-label mt-3">Phone</label>
+              <input type="tel" id="phone" name="phone" class="form-control">
+              <div class="invalid-feedback" id="phoneFeedback"></div>
+            </fieldset>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <fieldset class="m-0 p-0 border-0">
+              <legend class="fieldset-title">Project Information</legend>
+
+              <label for="project-type" class="form-label">Project Type <span class="text-danger">*</span></label>
+              <select id="project-type" name="project-type" class="form-select">
+                <option value="">-- Select --</option>
+                <option value="apartment">Apartment Interior</option>
+                <option value="house">House Interior</option>
+                <option value="commercial">Commercial Space</option>
+                <option value="exterior">Exterior Design</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="invalid-feedback" id="project-typeFeedback">
+
+              </div>
+
+              <label for="area" class="form-label mt-3">Approximate Area (m²)</label>
+              <input type="text" id="area" name="area" class="form-control">
+              <div class="invalid-feedback" id="areaFeedback">
+
+              </div>
+
+              <label for="budget" class="form-label mt-3">Estimated Budget</label>
+              <input type="text" id="budget" name="budget" class="form-control">
+              <div class="invalid-feedback" id="budgetFeedback"></div>
+
+              <label for="deadline" class="form-label mt-3">Desired Deadline</label>
+              <input type="date" id="deadline" name="deadline" class="form-control">
+              <div class="invalid-feedback" id="deadlineFeedback"></div>
+
+              <label for="message" class="form-label mt-3">Additional Details</label>
+              <textarea id="message" name="message" rows="4" class="form-control"
+                placeholder="Tell us more about your vision..."></textarea>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center my-4 gap-3">
+          <button type="submit" id="submitBtn" class="btn btn-danger px-4 fw-bold">
+            <span id="submitBtnText">Submit Estimate</span>
+            <span id="submitBtnSpinner" class="d-none">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Please wait...
+            </span>
+          </button>
+          <button type="button" id="resetBtn" class="btn btn-secondary px-4 fw-bold">Reset</button>
+        </div>
+      </form>
+      <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Success</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Your request has been submitted successfully!
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio id="successSound" src="success.mp3" preload="auto"></audio>
+    </div>
+  </section>
+  
+
+  <footer class="page-footer py-4 bg-deep-blue text-cream" aria-label="Footer">
+    <div class="container text-center">
+      <p class="mb-2">&copy; Asima Abdikarimova, Ayazhan Ayetova</p>
+      <div id="dateTimeBlock" class="text-center my-3 fw-bold"></div>
+      <nav aria-label="Footer navigation" class="d-flex justify-content-center gap-3">
+        <a href="about.html" class="footer-link">About Studio</a>
+        <a href="#hero" class="footer-link">Back to top</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="themeToggle.js"></script>
+  <script src="datetime.js"></script>
+</body>
+
+</html>
